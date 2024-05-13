@@ -1,7 +1,7 @@
-package cn.tedu._04mybatis.mapper;
+package re.kaguya._04mybatis.mapper;
 
-import cn.tedu._04mybatis.pojo.entity.Weibo;
-import cn.tedu._04mybatis.pojo.vo.WeiboVO1;
+import re.kaguya._04mybatis.pojo.entity.Weibo;
+import re.kaguya._04mybatis.pojo.vo.WeiboVO1;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

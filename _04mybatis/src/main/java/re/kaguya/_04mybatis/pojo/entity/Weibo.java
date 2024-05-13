@@ -1,4 +1,4 @@
-package cn.tedu._04mybatis.pojo.entity;
+package re.kaguya._04mybatis.pojo.entity;
 
 import java.util.Date;
 

@@ -1,16 +1,15 @@
-package cn.tedu._04mybatis;
+package re.kaguya._04mybatis;
 
-import cn.tedu._04mybatis.mapper.CommentMapper;
-import cn.tedu._04mybatis.mapper.UserMapper;
-import cn.tedu._04mybatis.mapper.WeiboMapper;
-import cn.tedu._04mybatis.pojo.entity.Comment;
-import cn.tedu._04mybatis.pojo.entity.User;
-import cn.tedu._04mybatis.pojo.entity.Weibo;
+import re.kaguya._04mybatis.mapper.CommentMapper;
+import re.kaguya._04mybatis.mapper.UserMapper;
+import re.kaguya._04mybatis.mapper.WeiboMapper;
+import re.kaguya._04mybatis.pojo.entity.Comment;
+import re.kaguya._04mybatis.pojo.entity.User;
+import re.kaguya._04mybatis.pojo.entity.Weibo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import javax.xml.crypto.Data;
 import java.util.Date;
 
 @SpringBootTest

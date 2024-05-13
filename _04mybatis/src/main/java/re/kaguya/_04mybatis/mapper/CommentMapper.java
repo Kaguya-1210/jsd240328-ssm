@@ -1,7 +1,7 @@
-package cn.tedu._04mybatis.mapper;
+package re.kaguya._04mybatis.mapper;
 
-import cn.tedu._04mybatis.pojo.entity.Comment;
-import cn.tedu._04mybatis.pojo.vo.CommentVo1;
+import re.kaguya._04mybatis.pojo.entity.Comment;
+import re.kaguya._04mybatis.pojo.vo.CommentVo1;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

@@ -1,7 +1,6 @@
-package cn.tedu._04mybatis.mapper;
+package re.kaguya._04mybatis.mapper;
 
-import cn.tedu._04mybatis.pojo.entity.User;
-import org.apache.ibatis.annotations.Insert;
+import re.kaguya._04mybatis.pojo.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

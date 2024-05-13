@@ -1,4 +1,4 @@
-package cn.tedu._04mybatis.pojo.vo;
+package re.kaguya._04mybatis.pojo.vo;
 
 public class CommentVo1 {
     private String content;

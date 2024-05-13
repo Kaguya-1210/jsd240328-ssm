@@ -64,7 +64,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>cn.tedu._04mybatis.Application</mainClass>
+                    <mainClass>re.kaguya._04mybatis.Application</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>
