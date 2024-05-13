@@ -32,9 +32,9 @@ class ApplicationTests {
     void insertUserTest(){
         // 1.准备测试数据
         User user = new User();
-        user.setUsername("晶晶");
+        user.setUsername("Kaguya");
         user.setPassword("123456");
-        user.setNickname("晶晶");
+        user.setNickname("Kaguya");
         user.setCreated(new Date());
         // 2.调用方法测试
         userMapper.insertUser(user);
@@ -49,14 +49,14 @@ class ApplicationTests {
         Weibo weibo = new Weibo();
         weibo.setContent("今天天气真好");
         weibo.setCreated(new Date());
-        weibo.setUserId(100L);
+        weibo.setUserId(1010L);
         // 2.调用方法测试
         weiboMapper.insertWeibo(weibo);
     }
 
     @Test
     void deleteWeibo(){
-        Long id = 202L;
+        Long id = 1010L;
         weiboMapper.deleteWeibo(id);
     }
 
@@ -84,7 +84,7 @@ class ApplicationTests {
 
     @Test
     void setWeiboTest() {
-        System.out.println(weiboMapper.selectWeiboTest(203L));
+        System.out.println(weiboMapper.selectWeiboTest(101L));
     }
 
     @Autowired

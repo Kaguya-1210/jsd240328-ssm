@@ -9,19 +9,19 @@ import java.util.List;
 @Mapper
 public interface CommentMapper {
 
-    @Insert("INSERT INTO comment(content,created,user_id,weibo_id) VALUES (#{content},#{created},#{userId},#{weiboId})")
+   // @Insert("INSERT INTO comment(content,created,user_id,weibo_id) VALUES (#{content},#{created},#{userId},#{weiboId})")
     void insert(Comment comment);
 
-    @Delete("DELETE FROM comment WHERE user_id=#{uid}")
+   // @Delete("DELETE FROM comment WHERE user_id=#{uid}")
     void deleteById(Long uid);
 
-    @Update("UPDATE comment SET content=#{content} WHERE user_id=#{userId}")
+    //@Update("UPDATE comment SET content=#{content} WHERE user_id=#{userId}")
     void updateContact(Comment comment);
 
-    @Select("SELECT content,user_id userId,weibo_id weiboId FROM comment WHERE id=#{wid}")
+   // @Select("SELECT content,user_id userId,weibo_id weiboId FROM comment WHERE id=#{wid}")
     List<CommentVo1> selectContent(Long wid);
 
-    @Select("SELECT content,user_id userId,weibo_id weiboId FROM comment WHERE weibo_id=#{wid}")
+   // @Select("SELECT content,user_id userId,weibo_id weiboId FROM comment WHERE weibo_id=#{wid}")
     List<CommentVo1> selectContent1(Long wid);
 
 
