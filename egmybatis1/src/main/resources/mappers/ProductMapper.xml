@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="re.kaguya.egmybatis1.mapper.ProductMapper">
+    <insert id="insertProduct">
+        INSERT INTO product(title, price, stock)
+        VALUES (#{title}, #{price}, #{stock});
+    </insert>
+    <select id="selectProduct" resultType="re.kaguya.egmybatis1.pojo.vo.ProductVo">
+        SELECT title, price
+        FROM product
+        WHERE id = #{uid};
+    </select>
+
+    <delete id="deleteProduct">
+        DELETE
+        FROM product
+        WHERE id = #{uid};
+    </delete>
+</mapper>
+
