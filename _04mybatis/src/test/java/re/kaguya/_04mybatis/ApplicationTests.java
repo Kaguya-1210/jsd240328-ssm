@@ -153,10 +153,23 @@ class ApplicationTests {
 
     @Test
     void selectWeiboCount() {
-        System.out.println(weiboMapper.selectWeiboCount());
-
+        System.out.println(weiboMapper.selectWeiboVo1ById1(200L));
     }
 
+    @Test
+    void selectResultVoTest1() {
+        System.out.println(weiboMapper.selectWeiboVo1ById1(200L));
+    }
+
+    @Test
+    void testSelectWeiBoVo2ById1(){
+        System.out.println(weiboMapper.selectWeiboVO2ById2(100L));
+    }
+
+    @Test
+    void commentWeiboTest() {
+        System.out.println(weiboMapper.selectWeiboComment(200L));
+    }
 
 }
 
