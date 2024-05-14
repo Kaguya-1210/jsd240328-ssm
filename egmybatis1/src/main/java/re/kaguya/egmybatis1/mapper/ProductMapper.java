@@ -16,4 +16,10 @@ public interface ProductMapper {
 
     List<ProductVo1> selectAllProduct();
 
+    int deleteByIds(List<Long> ids);
+
+    int dynamicUpdate(Product product);
+
+    int allCount();
+
 }

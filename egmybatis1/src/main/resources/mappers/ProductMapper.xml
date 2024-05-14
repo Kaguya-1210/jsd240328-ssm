@@ -23,5 +23,30 @@
         SELECT title, stock
         from product;
     </select>
+
+    <delete id="deleteByIds">
+        DELETE
+        FROM product
+        WHERE id IN(
+        <foreach collection="list" item="aaa" separator=",">
+            #{aaa}
+        </foreach>
+        );
+    </delete>
+
+    <update id="dynamicUpdate">
+        UPDATE product
+        <set>
+            <if test="title!=null">title=#{title},</if>
+            <if test="price!=null">price=#{price},</if>
+            <if test="stock!=null">stock=#{stock}</if>
+        </set>
+        WHERE id=#{id};
+    </update>
+
+    <select id="allCount" resultType="int">
+        SELECT COUNT(*)
+        FROM product;
+    </select>
 </mapper>
 
