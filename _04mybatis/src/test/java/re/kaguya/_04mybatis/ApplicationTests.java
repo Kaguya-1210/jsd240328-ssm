@@ -122,6 +122,26 @@ class ApplicationTests {
        void selectTest1() {
         System.out.println(commentsMapper.selectContent1(101L));
     }
+
+    @Test
+    void upWeibo() {
+        Weibo w = new Weibo();
+        w.setId(203L);
+        w.setContent("upTest");
+        w.setCreated(new Date());
+        w.setUserId(10086L);
+        int i = weiboMapper.dynamicUpdateWeibo(w);
+        if (i != 0) {
+            System.out.println("修改完毕");
+        }
+    }
+
+    @Test
+    void arrayDeleteWeibo() {
+        Long[] a = {203L, 204L, 205L};
+        weiboMapper.deleteByIds(a);
+    }
+
 }
 
 

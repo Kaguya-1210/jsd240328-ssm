@@ -38,4 +38,21 @@
         FROM weibo
         where id = #{wid};
     </select>
+
+    <update id="dynamicUpdateWeibo">
+        UPDATE weibo
+        <set>
+            <if test="content!=null">content=#{content},</if>
+            <if test="created!=null">created=#{created},</if>
+            <if test="userId!=null">user_id=#{userId}</if>
+        </set>
+        WHERE id=#{id};
+    </update>
+
+    <delete id="deleteByIds">
+        DELETE FROM weibo WHERE id IN (
+        <foreach collection="array" item="a" separator=",">
+            #{a}
+        </foreach>)
+    </delete>
 </mapper>

@@ -29,6 +29,10 @@ public interface WeiboMapper {
     //@Select("SELECT content,created userId FROM weibo where id=#{wid}")
     List<WeiboVO1> selectWeiboTest(Long wid);
 
+    int dynamicUpdateWeibo(Weibo weibo);
+
+    int deleteByIds(Long[] id);
+
 
 }
 
