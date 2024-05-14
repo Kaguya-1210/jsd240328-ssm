@@ -49,15 +49,19 @@
         WHERE id=#{id};
     </update>
 
+    <sql id="deleteSql">
+        DELETE FROM weibo WHERE id IN
+    </sql>
+
     <delete id="deleteByIds">
-        DELETE FROM weibo WHERE id IN (
+        <include refid="deleteSql"/> (
         <foreach collection="array" item="a" separator=",">
             #{a}
         </foreach>)
     </delete>
 
     <delete id="deleteByIds1">
-        DELETE FROM weibo WHERE id IN (
+        <include refid="deleteSql"/> (
         <foreach collection="list" item="a" separator=",">
             #{a}
         </foreach>)
