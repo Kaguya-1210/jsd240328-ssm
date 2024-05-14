@@ -15,9 +15,9 @@ class Egmybatis1ApplicationTests {
     @Test
     void ins() {
         Product product = new Product();
-        product.setTitle("test");
-        product.setPrice(1231.1);
-        product.setStock(129L);
+        product.setTitle("tes4t");
+        product.setPrice(12314.1);
+        product.setStock(1249L);
         productMapper.insertProduct(product);
     }
 
@@ -33,6 +33,11 @@ class Egmybatis1ApplicationTests {
     @Test
     void deleteProduct() {
         productMapper.deleteProduct(1L);
+    }
+
+    @Test
+    void selectAllTest() {
+        System.out.println(productMapper.selectAllProduct());
     }
 
 }

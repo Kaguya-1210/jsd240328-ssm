@@ -1,6 +1,6 @@
 package re.kaguya.egmybatis1.pojo.vo;
 
-public class ProductVo {
+public class ProductVo1 {
     private String title;
     private double price;
 
@@ -11,8 +11,6 @@ public class ProductVo {
                 ", price=" + price +
                 '}';
     }
-
-
 
     public String getTitle() {
         return title;

@@ -7,7 +7,7 @@
         INSERT INTO product(title, price, stock)
         VALUES (#{title}, #{price}, #{stock});
     </insert>
-    <select id="selectProduct" resultType="re.kaguya.egmybatis1.pojo.vo.ProductVo">
+    <select id="selectProduct" resultType="re.kaguya.egmybatis1.pojo.vo.ProductVo1">
         SELECT title, price
         FROM product
         WHERE id = #{uid};
@@ -18,5 +18,10 @@
         FROM product
         WHERE id = #{uid};
     </delete>
+
+    <select id="selectAllProduct" resultType="re.kaguya.egmybatis1.pojo.vo.ProductVo2">
+        SELECT title, stock
+        from product;
+    </select>
 </mapper>
 
