@@ -171,6 +171,12 @@ class ApplicationTests {
         System.out.println(weiboMapper.selectWeiboComment(200L));
     }
 
+    @Test
+    void commentWeiboTestList() {
+        System.out.println(weiboMapper.selectWeiboVO4BybId4(200L));
+    }
+
+
 }
 
 

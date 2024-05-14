@@ -131,4 +131,26 @@
                  JOIN comment c ON w.id = c.weibo_id
         WHERE w.id = #{wid};
     </select>
+
+    <resultMap id="ddd" type="re.kaguya._04mybatis.pojo.vo.ResultMapVO4">
+        <id column="wid" property="id"/>
+        <result column="wcontent" property="content"/>
+        <collection property="commentList" ofType="re.kaguya._04mybatis.pojo.vo.CommentVo3">
+            <id column="cid" property="id"/>
+            <result column="ccontent" property="content"/>
+            <result column="created" property="created"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectWeiboVO4BybId4" resultMap="ddd">
+        SELECT w.id     wid,
+               w.content wcontent,
+               c.id      cid,
+               c.content ccontent,
+               c.created
+        FROM weibo w
+                 JOIN comment c ON w.id = c.weibo_id
+        WHERE w.id = #{wid};
+    </select>
+
 </mapper>

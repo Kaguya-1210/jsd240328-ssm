@@ -1,14 +1,11 @@
 package re.kaguya._04mybatis.mapper;
 
 import re.kaguya._04mybatis.pojo.entity.Weibo;
-import re.kaguya._04mybatis.pojo.vo.ResultMapVO2;
-import re.kaguya._04mybatis.pojo.vo.WeiboCommentVo1;
-import re.kaguya._04mybatis.pojo.vo.WeiboVO1;
+import re.kaguya._04mybatis.pojo.vo.*;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-import re.kaguya._04mybatis.pojo.vo.resultMapVO1;
 
 import java.util.List;
 
@@ -46,6 +43,7 @@ public interface WeiboMapper {
 
     WeiboCommentVo1 selectWeiboComment(Long wid);
 
+    ResultMapVO4 selectWeiboVO4BybId4(Long wid);
 
 }
 
