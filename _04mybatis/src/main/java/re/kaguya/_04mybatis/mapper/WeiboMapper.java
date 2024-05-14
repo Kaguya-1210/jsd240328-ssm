@@ -33,7 +33,9 @@ public interface WeiboMapper {
 
     int deleteByIds(Long[] id);
 
+    int deleteByIds1(List<Long> id);
 
+    int selectWeiboCount();
 }
 
 

@@ -10,7 +10,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @SpringBootTest
 class ApplicationTests {
@@ -141,6 +143,20 @@ class ApplicationTests {
         Long[] a = {203L, 204L, 205L};
         weiboMapper.deleteByIds(a);
     }
+    @Test
+    void arrayDeleteWeibo1() {
+        List<Long> longs = new ArrayList<>();
+        longs.add(206L);
+        longs.add(207L);
+        weiboMapper.deleteByIds1(longs);
+    }
+
+    @Test
+    void selectWeiboCount() {
+        System.out.println(weiboMapper.selectWeiboCount());
+
+    }
+
 
 }
 

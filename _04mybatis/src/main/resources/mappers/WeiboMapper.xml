@@ -55,4 +55,16 @@
             #{a}
         </foreach>)
     </delete>
+
+    <delete id="deleteByIds1">
+        DELETE FROM weibo WHERE id IN (
+        <foreach collection="list" item="a" separator=",">
+            #{a}
+        </foreach>)
+    </delete>
+
+    <select id="selectWeiboCount" resultType="int">
+        SELECT COUNT(*)
+        FROM weibo;
+    </select>
 </mapper>
