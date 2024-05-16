@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="re.kaguya._05mvcboot02.pojo.mapper.UserMapper">
+    <insert id="insertUser">
+        INSERT INTO user(username, password, nickname, created)
+        VALUES (#{username}, #{password}, #{nickname}, #{created})
+    </insert>
+
+    <select id="selectUserList" resultType="re.kaguya._05mvcboot02.pojo.pojo.vo.UserListVo">
+        SELECT username, password
+        FROM user;
+    </select>
+
+    <delete id="deleteUser">
+        DELETE
+        FROM user
+        WHERE id = #{id};
+    </delete>
+
+    <update id="updateUser">
+        UPDATE user
+        <set>
+            <if test="username!=null">username=#{username},</if>
+            <if test="password!=null">password=#{password},</if>
+            <if test="nickname!=null">nickname=#{nickname},</if>
+            <if test="created!=null">created=#{created}</if>
+        </set>
+        WHERE id=#{id};
+    </update>
+</mapper>

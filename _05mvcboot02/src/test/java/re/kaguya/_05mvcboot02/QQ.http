@@ -1,0 +1,6 @@
+### 4. 更新用户功能测试
+POST http://localhost:8081/v1/users/update
+Content-Type: application/x-www-form-urlencoded
+
+id=1&nickname=rrrrr
+********************
