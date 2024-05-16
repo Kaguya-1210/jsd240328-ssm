@@ -1,0 +1,34 @@
+POST http://localhost:8081/address/update
+Content-Type: application/x-www-form-urlencoded
+
+id=4&receiver=RidEr0&email=1041129066&mobile=10000
+
+###
+
+
+
+//delete Address
+POST http://localhost:8081/address/delete
+Content-Type: application/x-www-form-urlencoded
+
+id = 3
+
+###
+
+
+
+//selectAll
+GET http://localhost:8081/address/select
+Accept: application/json
+
+###
+
+
+
+//addEmp
+POST http://localhost:8081/address/insert
+Content-Type: application/x-www-form-urlencoded
+
+receiver=Kaguya1&address=beijing&email=rider0@163.com&mobile=10086&tag=杯子
+
+###

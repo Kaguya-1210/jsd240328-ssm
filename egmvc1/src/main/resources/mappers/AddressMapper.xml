@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="re.kaguya.egmvc1.mapper.AddressMapper">
+    <insert id="addAddress">
+        INSERT INTO address(receiver, address, email, mobile, tag)
+        VALUES (#{receiver}, #{address}, #{email}, #{mobile}, #{tag});
+    </insert>
+
+    <select id="selectAllEmp" resultType="re.kaguya.egmvc1.pojo.entity.Address">
+        select *
+        from address;
+    </select>
+
+    <delete id="deleteAddress">
+        DELETE
+        FROM address
+        WHERE id = #{id};
+    </delete>
+
+    <update id="updateAddress">
+        UPDATE address
+        <set>
+            <if test="receiver != null">receiver=#{receiver},</if>
+            <if test="address != null">address=#{address},</if>
+            <if test="email != null">email=#{email},</if>
+            <if test="mobile != null">mobile=#{mobile},</if>
+            <if test="tag != null">tag=#{tag}</if>
+        </set>
+        WHERE id=#{id};
+    </update>
+</mapper>
