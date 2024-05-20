@@ -1,4 +1,4 @@
-package re.kaguya._05mvcboot02.pojo.pojo.entity;
+package re.kaguya._05mvcboot02.pojo.entity;
 
 import lombok.Data;
 

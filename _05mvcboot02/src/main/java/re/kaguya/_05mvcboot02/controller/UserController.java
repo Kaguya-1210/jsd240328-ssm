@@ -1,6 +1,8 @@
-package re.kaguya._05mvcboot02.pojo.controller;
+package re.kaguya._05mvcboot02.controller;
 
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,15 +10,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import re.kaguya._05mvcboot02.pojo.mapper.UserMapper;
-import re.kaguya._05mvcboot02.pojo.pojo.dto.UserInsertDTO;
-import re.kaguya._05mvcboot02.pojo.pojo.entity.User;
-import re.kaguya._05mvcboot02.pojo.pojo.vo.UserListVo;
-import re.kaguya._05mvcboot02.pojo.utils.Result;
+import re.kaguya._05mvcboot02.mapper.UserMapper;
+import re.kaguya._05mvcboot02.pojo.dto.UserInsertDTO;
+import re.kaguya._05mvcboot02.pojo.entity.User;
+import re.kaguya._05mvcboot02.pojo.vo.UserListVo;
+import re.kaguya._05mvcboot02.utils.Result;
 
 import java.util.Date;
 import java.util.List;
 
+@Tag(name = "用户管理")
+@Slf4j
 @RestController
 @RequestMapping("/v1/users/")
 public class UserController {

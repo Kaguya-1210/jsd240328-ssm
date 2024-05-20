@@ -2,13 +2,13 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="re.kaguya._05mvcboot02.pojo.mapper.UserMapper">
+<mapper namespace="re.kaguya._05mvcboot02.mapper.UserMapper">
     <insert id="insertUser">
         INSERT INTO user(username, password, nickname, created)
         VALUES (#{username}, #{password}, #{nickname}, #{created})
     </insert>
 
-    <select id="selectUserList" resultType="re.kaguya._05mvcboot02.pojo.pojo.vo.UserListVo">
+    <select id="selectUserList" resultType="re.kaguya._05mvcboot02.pojo.vo.UserListVo">
         SELECT username, password
         FROM user;
     </select>

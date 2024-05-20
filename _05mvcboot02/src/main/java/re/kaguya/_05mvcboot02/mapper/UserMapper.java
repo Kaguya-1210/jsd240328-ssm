@@ -1,8 +1,8 @@
-package re.kaguya._05mvcboot02.pojo.mapper;
+package re.kaguya._05mvcboot02.mapper;
 
 
-import re.kaguya._05mvcboot02.pojo.pojo.entity.User;
-import re.kaguya._05mvcboot02.pojo.pojo.vo.UserListVo;
+import re.kaguya._05mvcboot02.pojo.entity.User;
+import re.kaguya._05mvcboot02.pojo.vo.UserListVo;
 
 import java.util.List;
 
