@@ -20,8 +20,17 @@ springdoc:
     - group: 'default'
       paths-to-match: '/**'
       packages-to-scan: re.kaguya._05mvcboot02
-# knife4j的增强配置，不需要增强可以不配
+
+#knife4j相关配置
 knife4j:
-  enable: true
+  enable: true    #开启knife4j，无需添加@EnableKnife4j注解
   setting:
-    language: zh_cn
+    language: zh_cn   #中文
+    swagger-model-name: KaguyaTest  #重命名SwaggerModel名称,默认
+  #开启Swagger的Basic认证功能,默认是false
+  basic:
+    enable: true
+    # Basic认证用户名
+    username: hgh
+    # Basic认证密码
+    password: a1234567
