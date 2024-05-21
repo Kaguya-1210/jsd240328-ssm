@@ -1,4 +1,4 @@
-package re.kaguya._05weibo.response;
+package re.kaguya.egweibo4.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,9 +13,8 @@ public enum StatusCode {
     PASSWORD_ERROR(1002, "密码错误"),
     USERNAME_ERROR(1003, "用户名错误"),
     USERNAME_ALREADY_EXISTS(1004, "用户名被占用"),
-    OPERATION_SUCCESS(2001, "操作成功"),
-    OPERATION_FAILED(2002, "操作失败"),
-    THROWABLE_ERROR(9999,"未知异常");
+    OPERATION_SUCCESS(6000, "操作成功"),
+    OPERATION_FAILED(7000, "操作失败");
     private int state;
     private String message;
     }

@@ -43,8 +43,12 @@ public class WeiboController {
     public JsonResult selectWeibo() {
         return JsonResult.ok(weiboMapper.select());
     }
+
     @GetMapping("selectById")
     public JsonResult selectById(Integer id) {
+        if (id < 0) {
+            throw new IllegalArgumentException("ID值不能小于0");
+        }
         return JsonResult.ok(weiboMapper.selectWeibo(id));
     }
 }

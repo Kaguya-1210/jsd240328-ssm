@@ -1,0 +1,19 @@
+server:
+  port: 8081
+knife4j:
+  enable: true    #??knife4j?????@EnableKnife4j??
+  setting:
+    language: zh_cn   #??
+    swagger-model-name: KaguyaTest  #???SwaggerModel??,??
+  #??Swagger?Basic????,???false
+  basic:
+    enable: false
+    # Basic?????
+    username: hgh
+    # Basic????
+    password: a1234567
+logging:
+  level:
+    root: warn
+    re.kaguya.egweibo4: debug
+
