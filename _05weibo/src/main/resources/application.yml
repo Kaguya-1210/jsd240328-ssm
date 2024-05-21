@@ -20,7 +20,7 @@ springdoc:
   group-configs:
     - group: 'default'
       paths-to-match: '/**'
-      packages-to-scan: re.kaguya._05mvcboot02
+      packages-to-scan: re.kaguya._05weibo
 
 #knife4j相关配置
 knife4j:
@@ -30,9 +30,12 @@ knife4j:
     swagger-model-name: KaguyaTest  #重命名SwaggerModel名称,默认
   #开启Swagger的Basic认证功能,默认是false
   basic:
-    enable: true
+    enable: false
     # Basic认证用户名
     username: hgh
     # Basic认证密码
     password: a1234567
-
+logging:
+  level:
+    root: warn
+    re.kaguya._05weibo: debug

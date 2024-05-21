@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="re.kaguya._05mvcboot3.mapper.UserMapper">
+    <select id="selectUser">
+        select id, password, nickname
+        from mvc_user
+        where username = #{username}
+          and password = #{password};
+    </select>
+    <insert id="sendContent">
+        insert into mvc_article(title, content, user_id)
+        values (#{title}, #{content}, #{userId});
+    </insert>
+    <select id="selectArticle" resultType="re.kaguya._05mvcboot3.pojo.vo.ArticleVO">
+        select ma.title, ma.content, ms.nickname
+        from mvc_article ma
+                 join mvc_user ms on ms.id = ma.user_id
+        where ma.id = #{id};
+    </select>
+</mapper>
