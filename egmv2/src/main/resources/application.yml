@@ -8,7 +8,7 @@ spring:
 logging:
   level:
     root: warn
-    re.kaguya._05mvcboot3: debug
+    re.kaguya.egmv2: debug
 # springdoc-openapi????
 springdoc:
   swagger-ui:
@@ -20,7 +20,7 @@ springdoc:
   group-configs:
     - group: 'default'
       paths-to-match: '/**'
-      packages-to-scan: re.kaguya._05mvcboot3
+      packages-to-scan: re.kaguya.egmv2
 
 #knife4j????
 knife4j:

@@ -32,7 +32,7 @@ public class UserController {
 
     @PostMapping("/reg")
     @Operation(summary = "注册")
-    public JsonResult reg(@RequestBody @Validated userRegDTO UserDTO) {
+    public JsonResult reg(@Validated @RequestBody userRegDTO UserDTO) {
         log.debug(UserDTO.toString());
         UserVo userVo = userMapper.selectByUsername(UserDTO.getUsername());
         if (userVo != null) {
