@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.*;
 import re.kaguya._weibo_kaguya.common.response.JsonResult;
 import re.kaguya._weibo_kaguya.common.response.StatusCode;
 import re.kaguya._weibo_kaguya.mapper.UserMapper;
-import re.kaguya._weibo_kaguya.pojo.dto.userLoginDTO;
-import re.kaguya._weibo_kaguya.pojo.dto.userRegDTO;
+import re.kaguya._weibo_kaguya.pojo.dto.UserLoginDTO;
+import re.kaguya._weibo_kaguya.pojo.dto.UserRegDTO;
 import re.kaguya._weibo_kaguya.pojo.entity.User;
 import re.kaguya._weibo_kaguya.pojo.vo.UserVo;
 
@@ -32,7 +32,7 @@ public class UserController {
 
     @PostMapping("/reg")
     @Operation(summary = "注册")
-    public JsonResult reg(@Validated @RequestBody userRegDTO UserDTO) {
+    public JsonResult reg(@Validated @RequestBody UserRegDTO UserDTO) {
         log.debug(UserDTO.toString());
         UserVo userVo = userMapper.selectByUsername(UserDTO.getUsername());
         if (userVo != null) {
@@ -47,7 +47,7 @@ public class UserController {
 
     @PostMapping("/login")
     @Operation(summary = "登录")
-    public JsonResult login(@RequestBody @Validated userLoginDTO userLoginDTO, HttpSession session) {
+    public JsonResult login(@RequestBody @Validated UserLoginDTO userLoginDTO, HttpSession session) {
         UserVo userVo = userMapper.selectByUsername(userLoginDTO.getUsername());
         if (userVo != null) {
             if (userVo.getPassword().equals(userLoginDTO.getPassword())) {

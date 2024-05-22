@@ -2,8 +2,32 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.tedu._05weibo.mapper.WeiboMapper">
-
+<mapper namespace="re.kaguya._weibo_kaguya.mapper.WeiboMapper">
+    <insert id="insert">
+        INSERT INTO weibo(content, created, user_id)
+        VALUES (#{content}, #{created}, #{userId})
+    </insert>
+    <resultMap id="aaa" type="re.kaguya._weibo_kaguya.pojo.vo.WeiboIndexVO">
+        <id column="id" property="id"/>
+        <result column="content" property="content"/>
+        <result column="nickname" property="nickname"/>
+    </resultMap>
+    <select id="selectIndex" resultMap="aaa">
+        SELECT w.id,
+               w.content,
+               u.nickname
+        FROM user u
+                 JOIN weibo w ON u.id = w.user_id
+    </select>
+    <select id="selectById" resultType="re.kaguya._weibo_kaguya.pojo.vo.WeiboDetailVO">
+        SELECT w.id,
+               w.content,
+               w.created,
+               u.nickname
+        FROM user u
+                 JOIN weibo w ON u.id = w.user_id
+        WHERE w.id = #{id}
+    </select>
 </mapper>
 
 

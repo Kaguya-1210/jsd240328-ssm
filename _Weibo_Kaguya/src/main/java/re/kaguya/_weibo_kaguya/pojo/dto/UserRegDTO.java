@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 
 @Data
-public class userRegDTO {
+public class UserRegDTO {
     @Schema(description = "用户名",required = true)
     @NotBlank
     @Pattern(regexp = "^[\\u4e00-\\u9fa5]{1,7}|[a-zA-Z]{1,14}$", message = "用户名不能超过7个汉字或14个英文字符")

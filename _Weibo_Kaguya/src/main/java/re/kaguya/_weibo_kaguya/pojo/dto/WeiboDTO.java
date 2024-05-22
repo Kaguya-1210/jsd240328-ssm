@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
-public class weiboDTO {
+public class WeiboDTO {
     @Schema(description = "发布内容")
     @NotBlank
     private String content;

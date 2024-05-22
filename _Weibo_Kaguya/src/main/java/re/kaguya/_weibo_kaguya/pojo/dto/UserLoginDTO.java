@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
-public class userLoginDTO {
+public class UserLoginDTO {
     @Schema(description = "用户名", required = true)
     @NotBlank
     private String username;
